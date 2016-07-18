@@ -20,7 +20,7 @@ label {
   width: 335px;
   height: 100%;
   color: #a5a8ba;
-  padding: 72px 0;
+  padding: 66px 0;
   background: #464f77;
   box-sizing: border-box;
 }
@@ -31,15 +31,17 @@ label {
   box-sizing: border-box;
 }
 #sidebar table + table {
-  margin: 55px 0;
+  margin: 50px 0;
 }
 #sidebar th {
   text-align: right;
   color: #d8d9e0;
   font-weight: 100;
+  font-size: 18px;
 }
 #sidebar td {
   text-align: right;
+  line-height: 36px;
 }
 #sidebar th span {
   background: #6b7292;
@@ -51,17 +53,33 @@ label {
   font-size: 14px;
   padding: 2px 3px;
 }
+#sidebar td span {
+  background: #6b7292;
+  border-top-right-radius: 100%;
+  border-top-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+  border-bottom-left-radius: 100%;
+  text-align: center;
+  font-size: 14px;
+  padding: 2px 5px;
+}
 #sidebar th:first-of-type {
-  width: 125px;
+  position: relative;
+  top: 3px;
+  width: 127px;
   text-align: right;
 }
-#sidebar th:nth-of-type(2),
+#sidebar th:nth-of-type(2) {
+  text-align: left;
+  padding: 0 0 2px 10px;
+}
 #sidebar td:nth-of-type(2) {
   text-align: left;
+  padding: 2px 0 2px 10px;
 }
 #sidebar th:last-of-type,
 #sidebar td:last-of-type {
-  padding-right: 36px;
+  padding-right: 32px;
 }
 #sidebar table + table td {
   text-decoration: line-through;
@@ -81,6 +99,30 @@ label {
   max-width: 840px;
   overflow: hidden;
 }
+#content table {
+  width: 100%;
+  padding: 27px 93px 1px 1px;
+  /*border-spacing: 0;*/
+  border-collapse: collapse;
+}
+#content th {
+  color: #3498d8;
+  font-weight: 200;
+  font-size: 15px;
+}
+#content td{
+  border-top: 1px solid #e7e7e7;
+}
+#content td:first-of-type {
+  background: url("images/checkbox_icon_unchecked.png") 10px 18px no-repeat;
+}
+#content tr.checked {
+  color: #b3b3b3;
+  text-decoration: line-through;
+}
+#content tr.checked td:first-of-type {
+  background: url("images/checkbox_icon_checked.png") 10px 17px no-repeat;
+}
 #content h2 {
   font-size: 20px;
   font-weight: 200;
@@ -88,14 +130,17 @@ label {
 }
 #content em {
   background: #148fd5;
-  border-top-right-radius: 9px;
-  border-top-left-radius: 9px;
-  border-bottom-right-radius: 9px;
-  border-bottom-left-radius: 9px;
+  border-top-right-radius: 100%;
+  border-top-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+  border-bottom-left-radius: 100%;
   text-align: center;
   font-size: 14px;
-  padding: 2px 3px;
+  padding: 2px 5px;
+  font-style: normal;
+  color: #ffffff;
 }
+
 /* Modal checkbox */
 #modal-toggle {
   display: none;
