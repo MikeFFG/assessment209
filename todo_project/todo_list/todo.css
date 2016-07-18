@@ -1,0 +1,150 @@
+@import url("whitespace-reset.css");
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font: normal 16px Helvetica, Arial, sans-serif;
+  letter-spacing: 1px;
+}
+
+#sidebar {
+  float: left;
+  width: 336px;
+  height: 100%;
+  color: #868ba2;
+  background: #464f77;
+  overflow: visible;
+  box-sizing: border-box;
+}
+
+#sidebar table {
+  width: 100%;
+  border-collapse: collapse;
+  box-sizing: border-box;
+  margin: 70px 0 0 0;
+}
+#sidebar table + table {
+  margin: 52px 0;
+}
+#sidebar table + table td {
+  text-decoration: line-through;
+}
+#sidebar tr {
+  width: 100%;
+}
+#sidebar th {
+  padding: 0 34px 7px 0;
+  text-align: right;
+  color: #d8d9e0;
+  font-size: 18px;
+  font-weight: 200;
+}
+#sidebar td {
+  padding: 11px 34px;
+  text-align: right;
+}
+#sidebar th:first-of-type {
+  padding-right: 10px;
+  text-align: right;
+}
+#sidebar td:first-of-type {
+  padding: 0 0 0 114px;
+}
+#sidebar th:nth-of-type(2),
+#sidebar td:nth-of-type(2) {
+  padding-left: 0;
+  padding-right: 0;
+  text-align: left;
+}
+
+#sidebar th span,
+#sidebar td span,
+#content h2 em {
+  font-size: 14px;
+  background: #6b7292;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  text-align: center;
+  padding: 1px 2px;
+}
+
+#sidebar tr.selected {
+  color: #d8d9e0;
+  background-color: #383f5f;
+}
+
+#content {
+  text-align: left;
+  overflow: hidden;
+  padding: 74px 0 0 20px;
+  max-width: 840px;
+}
+
+#content h2 {
+  font-size: 21px;
+  font-weight: normal;
+  margin: 0 0 0 10px;
+}
+
+#content h2 em {
+  margin-left: 20px;
+  font-style: normal;
+  padding: 0 4px;
+  color: #ffffff;
+  background: #148fd5;
+}
+
+#content table {
+  width: 100%;
+  padding: 25px 100px 0 0;
+}
+
+#content td{
+  padding: 12px 0;
+  border-top: 1px solid #e7e7e7;
+}
+#content td:first-of-type,
+#content th:first-of-type {
+  padding-left: 15px;
+  width: 25px;
+}
+#content td:last-of-type {
+  text-align: right;
+}
+#content th {
+  color: #3498d8;
+  font-weight: normal;
+  padding: 12px 0;
+}
+
+label {
+  position: absolute;
+  top: -500px;
+  cursor: pointer;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  label {
+  position: fixed;
+  top: 15px;
+  left: 25px;
+  }
+  #sidebar {
+    display: none;
+  }
+  #menu-toggle:checked ~ #sidebar {
+    display: block;
+  }
+  #menu-toggle:checked ~ label {
+    left: 360px;
+  }
+
+}
