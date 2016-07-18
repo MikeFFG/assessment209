@@ -90,13 +90,17 @@
         <thead>
           <tr>
             <th><img src="images/plus_icon.png" alt="Add New To Do" /></th>
-            <th colspan="2">Add new to do</th>
+            <th>Add new to do</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td></td>
-            <td>Item 1</td>
+            <td>
+              <label for="modal-toggle">
+              Item 1
+              </label>
+            </td>
             <td><img src="images/trash_bin_icon.png" alt="delete item" /></td>
           </tr>
           <tr>
@@ -141,6 +145,32 @@
           </tr>
         </tbody>
       </table>
+    </div>
+    <input type="checkbox" id="modal-toggle" />
+    <div id="modal">
+      <form action method="post">
+      <fieldset>
+        <dl>
+          <dt>Title</dt>
+          <dd><input type="text" name="title" id="title" value="Item 2" /></dd>
+          <dt>Due Date</dt>
+          <dd><select name="day" id="day">
+                <option value="16">16</option>
+              </select> /
+              <select name="month" id="month">
+                <option value="Month">Month</option>
+              </select> /
+              <select name="year" id="year">
+                <option value="Year">Year</option>
+              </select>
+          </dd>
+          <dt>Description</dt>
+          <dd><textarea name="description" id="description">Description</textarea></dd>
+        </dl>
+        <input type="button" id="save" name="save" value="Save" />
+        <input type="button" id="mark" name="mark" value="Mark As Complete" />
+      </fieldset>
+      </form>
     </div>
   </body>
 </html>
