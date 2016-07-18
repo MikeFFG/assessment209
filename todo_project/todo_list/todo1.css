@@ -81,6 +81,11 @@ label {
 #sidebar td:last-of-type {
   padding-right: 32px;
 }
+#sidebar table + table th:nth-of-type(2) {
+  position: relative;
+  top: -3px;
+  left: -1px;
+}
 #sidebar table + table td {
   text-decoration: line-through;
 }
@@ -154,6 +159,12 @@ label {
   font-style: normal;
   color: #ffffff;
 }
+#content td:nth-of-type(2) {
+  cursor: pointer;
+}
+#content td:nth-of-type(2):hover {
+  color: #91cbeb;
+}
 
 /* Modal checkbox */
 #modal-toggle {
@@ -179,55 +190,63 @@ label {
   background: rgba(0, 0, 0, .2);
 }
 
+/* Modal dialog */
+
 form {
   width: 575px;
   height: 400px;
+  font-size: 16px;
   padding: 26px 30px;
   background: #ffffff;
   box-sizing: border-box;
 }
-
 form dt,
 form dd {
   display: inline-block;
-  padding: 5px 0;
-  margin: 5px 0;
+  margin: 5px 0 4px 0;
 }
 form dt {
   width: 90px;
+}
+form dt:last-of-type {
+  position: relative;
+  top: -15px;
 }
 form input[type="text"] {
   font-size: 16px;
   width: 396px;
   height: 36px;
-  padding: 0 8px;
+  margin: 5px 0 0 0;
+  padding: 0 0 0 8px;
   box-sizing: border-box;
   border: solid 1px #b3b3b3;
 }
 form select {
-  width: 114px;
+  width: 118px;
   height: 36px;
   font-size: 16px;
-  margin: 14px 0 0 0;
+  margin: 14px 3px 13px 0;
   border-radius: 0px;
   overflow: hidden;
   box-sizing: border-box;
 }
-
 form dt {
   padding: 0 15px 0 0;
   text-align: left;
   vertical-align: center;
 }
-
 form dt:last-of-type {
   padding: 10px 15px 0 0;
   vertical-align: top;
 }
-
+form dd:last-of-type {
+  padding: 0;
+  margin: 0;
+}
 form textarea {
   width: 395px;
-  padding: 0 5px 5px 5px;
+  padding: 5px 5px 5px 10px;
+  letter-spacing: 1px;
   height: 145px;
   font-size: 16px;
   color: #757575;
@@ -235,7 +254,6 @@ form textarea {
   box-sizing: border-box;
   border: solid 1px #b3b3b3;
 }
-
 form input[type="button"] {
   font-size: 16px;
   color: #f4f9fc;
@@ -250,6 +268,7 @@ form input[type="button"] {
 form input[type="button"]:first-of-type {
   margin-left: 110px;
 }
+
 /* Invisible Button */
 
 body > label {
