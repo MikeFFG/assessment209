@@ -1,0 +1,154 @@
+@import url("whitespace-reset.css");
+
+/* Global Styles */
+html, body {
+  height: 100%;
+}
+body {
+  font: normal 15px Arial, Helvetica, sans-serif;
+  letter-spacing: 1px;
+  line-height: 40px;
+  font-weight: 200;
+}
+
+/* Sidebar */
+#sidebar {
+  float: left;
+  width: 335px;
+  height: 100%;
+  color: #a5a8ba;
+  background: #464f77;
+  box-sizing: border-box;
+}
+
+/* Content */
+#content {
+  text-align: left;
+  overflow: hidden;
+  padding: 74px 0 0 21px;
+  max-width: 840px;
+}
+
+/* Modal checkbox */
+#modal-toggle {
+  display: none;
+}
+#modal {
+  position: absolute;
+  left: -1000px;
+}
+#modal-toggle:checked ~ #modal {
+  position: absolute;
+  top: 107px;
+  left: 440px;
+}
+#modal-toggle:checked ~ #modal:before {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  content: "";
+  background: rgba(0, 0, 0, .2);
+}
+
+form {
+  width: 575px;
+  height: 400px;
+  padding: 26px 30px;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+form dt,
+form dd {
+  display: inline-block;
+  padding: 5px 0;
+  margin: 5px 0;
+}
+form dt {
+  width: 90px;
+}
+form input[type="text"] {
+  font-size: 16px;
+  width: 396px;
+  height: 36px;
+  padding: 0 8px;
+  box-sizing: border-box;
+  border: solid 1px #b3b3b3;
+}
+form select {
+  width: 114px;
+  height: 36px;
+  font-size: 16px;
+  margin: 14px 0 0 0;
+  border-radius: 0px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+form dt {
+  padding: 0 15px 0 0;
+  text-align: left;
+  vertical-align: center;
+}
+
+form dt:last-of-type {
+  padding: 10px 15px 0 0;
+  vertical-align: top;
+}
+
+form textarea {
+  width: 395px;
+  padding: 0 5px 5px 5px;
+  height: 145px;
+  font-size: 16px;
+  color: #757575;
+  resize: none;
+  box-sizing: border-box;
+  border: solid 1px #b3b3b3;
+}
+
+form input[type="button"] {
+  font-size: 16px;
+  color: #f4f9fc;
+  background-color: #148fd5;
+  text-decoration: none;
+  border: none;
+  width: 184px;
+  height: 36px;
+  border-radius: 5px;
+  margin: 8px 0 0 12px;
+}
+form input[type="button"]:first-of-type {
+  margin-left: 110px;
+}
+/* Invisible Button */
+
+body > label {
+  position: absolute;
+  top: -1000px;
+}
+#menu-toggle {
+  display: none;
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+  body > label {
+  position: fixed;
+  top: 15px;
+  left: 25px;
+  }
+  #sidebar {
+    display: none;
+  }
+  #menu-toggle:checked ~ #sidebar {
+    display: block;
+  }
+  #menu-toggle:checked ~ label {
+    left: 360px;
+  }
+}
