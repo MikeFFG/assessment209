@@ -154,10 +154,11 @@ label {
   border-bottom-left-radius: 100%;
   text-align: center;
   font-size: 13.5px;
-  padding: 2px 4px;
+  padding: 2px 5px;
   margin: -2px 0 0 18px;
   font-style: normal;
   color: #ffffff;
+  z-index: -5;
 }
 #content td:nth-of-type(2) {
   cursor: pointer;
@@ -210,7 +211,7 @@ form dt {
 }
 form dt:last-of-type {
   position: relative;
-  top: -15px;
+  top: -12px;
 }
 form input[type="text"] {
   font-size: 16px;
@@ -246,6 +247,7 @@ form dd:last-of-type {
 form textarea {
   width: 395px;
   padding: 5px 5px 5px 10px;
+  margin-top: 7px;
   letter-spacing: 1px;
   height: 145px;
   font-size: 16px;
@@ -255,10 +257,11 @@ form textarea {
   border: solid 1px #b3b3b3;
 }
 form input[type="button"] {
-  font-size: 16px;
-  color: #f4f9fc;
+  font-size: 15px;
+  color: #d3e5f4;
   background-color: #148fd5;
   text-decoration: none;
+  letter-spacing: 1px;
   border: none;
   width: 184px;
   height: 36px;
